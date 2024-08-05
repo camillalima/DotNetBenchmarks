@@ -1,3 +1,3 @@
 # DotNetBenchmarks
 
-<img src="/resultsBenchmark/json.png">
+<img src="/resultsBenchmark/json.png" alt="Resultado Benchmark JSON>
