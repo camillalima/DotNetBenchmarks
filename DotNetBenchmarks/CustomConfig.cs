@@ -10,12 +10,11 @@ public class CustomConfig : ManualConfig
 {
     public CustomConfig()
     {
-        Add(DefaultConfig.Instance.GetLoggers().ToArray());
-        Add(DefaultConfig.Instance.GetExporters().ToArray());
-        Add(DefaultConfig.Instance.GetColumnProviders().ToArray());
-        Add(MemoryDiagnoser.Default);
-        Add(new InliningDiagnoser());
-        //Add(ThreadingDiagnoser.Default);
-        Add(ExceptionDiagnoser.Default);
+        AddLogger(DefaultConfig.Instance.GetLoggers().ToArray());
+        AddExporter(DefaultConfig.Instance.GetExporters().ToArray());
+        AddColumnProvider(DefaultConfig.Instance.GetColumnProviders().ToArray());
+        AddDiagnoser(MemoryDiagnoser.Default);
+        AddDiagnoser(new InliningDiagnoser());
+        AddDiagnoser(ExceptionDiagnoser.Default);
     }
 }
